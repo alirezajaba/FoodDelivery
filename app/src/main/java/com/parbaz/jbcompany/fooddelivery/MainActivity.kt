@@ -25,7 +25,7 @@ class MainActivity : ComponentActivity() {
             FoodDeliveryTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
 
-                    MainScreen(Modifier.padding(innerPadding))
+                    MainScreen()
 
                     Greeting(
                         name = "Android",
@@ -57,6 +57,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     FoodDeliveryTheme {
-        MainScreen(Modifier)
+        MainScreen()
     }
 }

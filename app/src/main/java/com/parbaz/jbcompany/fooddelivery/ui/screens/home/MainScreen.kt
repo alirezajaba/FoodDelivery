@@ -16,7 +16,7 @@ import com.parbaz.jbcompany.fooddelivery.viewmodel.HomeViewModel
 
 
 @Composable
-fun MainScreen(modifier: Modifier,
+fun MainScreen(modifier: Modifier = Modifier,
     viewModel: HomeViewModel = viewModel()
 ) {
     val state by viewModel.foodItem.collectAsState()
@@ -80,6 +80,6 @@ fun ContentScreen(modifier: Modifier = Modifier, innerPadding: PaddingValues, st
 @Composable
 private fun BottomNavigationPreview(){
     FoodDeliveryTheme {
-        MainScreen(Modifier)
+        MainScreen()
     }
 }

@@ -33,4 +33,3 @@ fun FoodMenuGroup(foodMenuItems: List<FoodMenuItem>) {
         }
     }
 }
-
