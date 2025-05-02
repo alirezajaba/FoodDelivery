@@ -1,9 +1,10 @@
-package com.parbaz.jbcompany.fooddelivery.domain.repository
+package com.parbaz.jbcompany.fooddelivery.data.repository
 
 import com.parbaz.jbcompany.fooddelivery.R
 import com.parbaz.jbcompany.fooddelivery.domain.model.OfferItem
+import com.parbaz.jbcompany.fooddelivery.domain.repository.OfferRepository
 
-class FakeOfferRepository: OfferRepository {
+class LocalOfferRepository: OfferRepository {
 
     override suspend fun getOfferItems(): List<OfferItem> {
         return listOf(

@@ -1,4 +1,4 @@
-package com.parbaz.jbcompany.fooddelivery.domain.repository
+package com.parbaz.jbcompany.fooddelivery.data.repository
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.DateRange
@@ -7,8 +7,9 @@ import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.ShoppingCart
 import com.parbaz.jbcompany.fooddelivery.domain.model.BottomNavItem
+import com.parbaz.jbcompany.fooddelivery.domain.repository.BottomNavigationRepository
 
-class FakeBottomNavigationRepository: BottomNavigationRepository {
+class LocalBottomNavigationRepository: BottomNavigationRepository {
 
     override suspend fun getBottomNavigationItems(): List<BottomNavItem> {
         return listOf(

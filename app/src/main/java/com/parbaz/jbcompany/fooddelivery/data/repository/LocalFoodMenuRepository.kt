@@ -1,9 +1,10 @@
-package com.parbaz.jbcompany.fooddelivery.domain.repository
+package com.parbaz.jbcompany.fooddelivery.data.repository
 
 import com.parbaz.jbcompany.fooddelivery.R
 import com.parbaz.jbcompany.fooddelivery.domain.model.FoodMenuItem
+import com.parbaz.jbcompany.fooddelivery.domain.repository.FoodMenuRepository
 
-class FakeFoodMenuRepository: FoodMenuRepository {
+class LocalFoodMenuRepository: FoodMenuRepository {
 
     override suspend fun getFoodMenuItems(): List<FoodMenuItem> {
         return listOf(
