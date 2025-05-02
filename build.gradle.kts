@@ -3,4 +3,13 @@ plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.kotlin.compose) apply false
+
+    kotlin("kapt") version "1.8.0"
+    id("com.google.dagger.hilt.android") version "2.48.1" apply false
+
+}
+buildscript {
+    dependencies {
+        classpath(libs.hilt.android.gradle.plugin)
+    }
 }

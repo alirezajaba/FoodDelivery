@@ -1,7 +1,6 @@
 package com.parbaz.jbcompany.fooddelivery
 
 import android.os.Bundle
-import android.view.Window
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -11,12 +10,11 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.core.view.WindowCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.WindowInsetsControllerCompat
-import com.parbaz.jbcompany.fooddelivery.ui.screens.home.MainScreen
-import com.parbaz.jbcompany.fooddelivery.ui.theme.FoodDeliveryTheme
+import com.parbaz.jbcompany.fooddelivery.presentation.ui.screens.home.MainScreen
+import com.parbaz.jbcompany.fooddelivery.presentation.ui.theme.FoodDeliveryTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,18 +32,7 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-
-        setStatusBar(false, window)
-
     }
-}
-
-fun setStatusBar(enable: Boolean, window: Window) {
-        WindowCompat.setDecorFitsSystemWindows(window, enable)
-        WindowInsetsControllerCompat(
-            window,
-            window.decorView
-        ).hide(WindowInsetsCompat.Type.statusBars())
 }
 
 @Composable
